@@ -1,32 +1,39 @@
 <html>
 <head>
-  <script
-    src="https://code.jquery.com/jquery-3.2.1.min.js"
-    integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
-    crossorigin="anonymous"></script>
-    <!-- Latest compiled and minified CSS -->
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-
-  <!-- Optional theme -->
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
-
-  <!-- Latest compiled and minified JavaScript -->
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
-
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
   <style>
+    #thermo {
+        /* display:inline-flex; */
+    }
     #bar {
+        /* display:inline-flex; */
         width: 100%;
-        background-color: lightgrey;
     }
     #progress {
+        margin-top: 15px;
         width: 20%;
         height: 30px;
-        background-color: green;
+        background-color: #60d4f7;
     }
     .container {
       margin-top: 50px;
 
     }
+    .left-circle {
+      background: #60d4f7;
+      display: inline-flex;
+      /* margin: 0 1em 1em 0; */
+      height: 70px;
+      width: 140px;
+      border-bottom-left-radius: 70px;
+      border-bottom-right-radius: 70px;
+      border-top-right-radius: 70px;
+      border-top-left-radius: 70px;
+    }
+
   </style>
   <script>
     $(document).ready(function() {
@@ -50,13 +57,16 @@
   <div class ="container">
     <div class ="row">
       <div class = "col-xs-12 col-md-6">
-        <div id="bar">
-          <div id="progress">
+        <div id="thermo">
+          <div class="left-circle"></div>
+          <div id="bar">
+            <div id="progress">
+            </div>
           </div>
-        </div>
+          </div>
       </div>
       <div class = "col-xs-12 col-md-6">
-        <button id="interest" type="button" class="btn btn-default" onclick ="move(10)"> I'm interested!
+        <button id="interest" type="button" class="btn btn-defualt" onclick ="move(10)"> I'm interested!
         </button>
       </div>
     </div>
