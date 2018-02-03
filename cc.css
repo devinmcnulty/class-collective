@@ -1,0 +1,56 @@
+/* #font1 {
+    
+    font-family: 'Quattrocento Sans', sans-serif;
+}
+
+#font2 {
+    
+    font-family: 'Asap', sans-serif;
+}
+
+#font3 {
+    
+    font-family: 'Didact Gothic', sans-serif;
+}
+
+#font4 {
+    
+    font-family: 'Spectral SC', serif;
+
+}
+
+#font5-1 {
+    
+    font-family: 'Alegreya Sans SC', sans-serif;
+}
+
+#font5-2 {
+    
+    font-family: 'Alegreya Sans SC', sans-serif;
+}
+
+*/
+
+#topstuff { 
+    background-image: url(images!/chalkboard-black.jpg);
+    width: screen-width;
+    padding: 100px;
+    min-height: 45% ;
+
+}
+
+hr {
+    width: 5%;
+    color: whitesmoke;
+}
+
+#top {
+    font-family: 'Playfair Display SC', serif;
+    color: whitesmoke;
+}
+
+#bottom {
+    font-family: 'Playfair Display SC', serif;
+    color: whitesmoke;
+}
+
