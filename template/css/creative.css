@@ -54,6 +54,10 @@ section {
   padding: 8rem 0;
 }
 
+section#title {
+  padding: 4rem 0;
+}
+
 .section-heading {
   margin-top: 0;
 }
@@ -313,4 +317,8 @@ header.masthead p {
 
 .name-large {
   font-size: 5rem !important;
+}
+
+#title {
+  /* background-image: url("../img/art.jpeg") !important; */
 }
