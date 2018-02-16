@@ -31,26 +31,19 @@
 
 */
 
-#topstuff { 
-    background-image: url(images!/chalkboard-black.jpg);
-    width: screen-width;
-    padding: 100px;
-    min-height: 45% ;
 
-}
 
 hr {
     width: 5%;
     color: whitesmoke;
 }
 
-#top {
-    font-family: 'Playfair Display SC', serif;
-    color: whitesmoke;
-}
-
-#bottom {
-    font-family: 'Playfair Display SC', serif;
-    color: whitesmoke;
+/* Centered text */
+.centered {
+    color: whitesmoke
+    position: absolute;
+    top: 70%;
+    left: 50%;
+    transform: translate(-50%, -50%);
 }
 
