@@ -4,72 +4,38 @@
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/progressbar.js/1.0.1/progressbar.min.js"></script>
   <style>
-    #thermo {
-        /* display:inline-flex; */
-    }
-    #bar {
-        /* display:inline-flex; */
-        width: 100%;
-    }
-    #progress {
-        margin-top: 15px;
-        width: 20%;
-        height: 30px;
-        background-color: #60d4f7;
-    }
-    .container {
-      margin-top: 50px;
-
-    }
-    .left-circle {
-      background: #60d4f7;
-      display: inline-flex;
-      /* margin: 0 1em 1em 0; */
-      height: 70px;
-      width: 140px;
-      border-bottom-left-radius: 70px;
-      border-bottom-right-radius: 70px;
-      border-top-right-radius: 70px;
-      border-top-left-radius: 70px;
-    }
-
+    #container {
+        margin: 20px;
+        width: 400px;
+        height: 8px;
+      }
   </style>
   <script>
-    $(document).ready(function() {
-      init();
+    var bar = new ProgressBar.Line(container, {
+      strokeWidth: 4,
+      easing: 'easeInOut',
+      duration: 1400,
+      color: '#FFEA82',
+      trailColor: '#eee',
+      trailWidth: 1,
+      svgStyle: {width: '100%', height: '100%'}
     });
-    function init() {
-      var start_val = "10%";
-      var elem = document.getElementById("progress");
-      elem.style.width = start_val;
-    }
-    function move(inc) {
-        var elem = document.getElementById("progress");
-        var num = parseFloat(elem.style.width.slice(0,-1));
-        if (num <= 100 - inc) {
-          elem.style.width = num + inc + "%";
-        }
+
+    var i = 0;
+
+    function press() {
+    	if (i <= 1) {
+    	i+= 0.1;
+      }
+    	bar.animate(i);  // Number from 0.0 to 1.0
     }
   </script>
 </head>
 <body>
-  <div class ="container">
-    <div class ="row">
-      <div class = "col-xs-12 col-md-6">
-        <div id="thermo">
-          <div class="left-circle"></div>
-          <div id="bar">
-            <div id="progress">
-            </div>
-          </div>
-          </div>
-      </div>
-      <div class = "col-xs-12 col-md-6">
-        <button id="interest" type="button" class="btn btn-defualt" onclick ="move(10)"> I'm interested!
-        </button>
-      </div>
-    </div>
-  </div>
+   <div id="container"></div>
+    <button onclick="press()">
+    </button>
 </body>
 </html>
